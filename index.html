@@ -99,6 +99,34 @@
             
         </div>
     </li>
+    <li class = "open">
+        <div class="question">
+            <h2>What's for dinner?</h2>
+            <span class="bi bi-caret-down-fill"></span>
+        </div>                
+   
+    <div class="answer">
+        <p>Awesome!! Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+            Minus, nostrum perferendis? Aperiam, eius? Amet, tenetur. 
+            Sunt culpa totam sed sit ratione, reiciendis dolor,
+                quaerat ducimus nam vitae id, veritatis voluptatum.</p>
+        
+    </div>
+</li>
+<li class = "open">
+    <div class="question">
+        <h2>What's for dinner?</h2>
+        <span class="bi bi-caret-down-fill"></span>
+    </div>                
+
+<div class="answer">
+    <p>Awesome!! Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+        Minus, nostrum perferendis? Aperiam, eius? Amet, tenetur. 
+        Sunt culpa totam sed sit ratione, reiciendis dolor,
+            quaerat ducimus nam vitae id, veritatis voluptatum.</p>
+    
+</div>
+</li>
         </ul> 
         </div>
     </div>
@@ -110,19 +138,19 @@
         const questions = accordion.querySelectorAll('.question');
     
         function toggleAccordion() {
-          const thisItem = this.parentNode;
+        const thisItem = this.parentNode;
     
-          items.forEach(item => {
+        items.forEach(item => {
             if (thisItem == item) {
-              thisItem.classList.toggle('open');
-              return;
+            thisItem.classList.toggle('open');
+            return;
             }
     
             item.classList.remove('open');
-          });
+        });
         }
     
         questions.forEach(question => question.addEventListener('click', toggleAccordion));
-      </script>
+    </script>
 </body>
 </html>
