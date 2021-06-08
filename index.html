@@ -9,6 +9,10 @@
         body{
             background-color: rgb(209, 240, 197);
         }
+
+        ul{
+            padding: 10px;
+        }
         .accordion {
             background-color: efefef;
             border-radius: 10px;
@@ -34,36 +38,67 @@
             right: 20px;
             top: 0px;
             height: 100%;
-            display: ;
+            display:flex;
+            align-items: center;
+            transition: 1s cubic-bezier(0.175, 0.885, 0.32, 1.275)all;
         }
+
+        .answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: 1s cubic-bezier(0.175, 0.885, 0.32, 1.275)all;
+        }
+
+        .answer p {
+            padding: 20px;
+        }
+
+        .accordion li.open .question .bi{
+            transform: rotate(180g);
+
+        }
+        .accordion li.open .answer{
+            max-height: 150px;  
+
+        }
+        
     </style>
     <title>Accordion</title>
 </head>
 <body>
 
     <div class="container">
+
         <div class="accordion">
         <ul class="list-unstyled">
-            <li class="question">
-                <h2>Will i be rich?</h2>
-                <span class="bi bi-chevron-compact-down"></span>
-            </li>
-            <li class="answer">
+            <li class = "open">
+                <div class="question">
+                    <h2>Will i be rich?</h2>
+                    <span class="bi bi-caret-down-fill"></span>
+                </div>                
+           
+            <div class="answer">
                 <p>Awesome!! Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
                     Minus, nostrum perferendis? Aperiam, eius? Amet, tenetur. 
                     Sunt culpa totam sed sit ratione, reiciendis dolor,
                         quaerat ducimus nam vitae id, veritatis voluptatum.</p>
-            </li>
-            <li class="question">
+                
+            </div>
+        </li>
+        <li class = "open">
+            <div class="question">
                 <h2>What's for dinner?</h2>
-                <span class="bi bi-chevron-compact-down"></span>
-            </li>
-            <li class="answer">
-                <p>Awesome!! Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
-                    Minus, nostrum perferendis? Aperiam, eius? Amet, tenetur. 
-                    Sunt culpa totam sed sit ratione, reiciendis dolor,
-                        quaerat ducimus nam vitae id, veritatis voluptatum.</p>
-            </li>
+                <span class="bi bi-caret-down-fill"></span>
+            </div>                
+       
+        <div class="answer">
+            <p>Awesome!! Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+                Minus, nostrum perferendis? Aperiam, eius? Amet, tenetur. 
+                Sunt culpa totam sed sit ratione, reiciendis dolor,
+                    quaerat ducimus nam vitae id, veritatis voluptatum.</p>
+            
+        </div>
+    </li>
         </ul> 
         </div>
     </div>
